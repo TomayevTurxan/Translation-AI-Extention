@@ -1,16 +1,69 @@
-# React + Vite
+# Translation AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> AI-powered Chrome extension for learning English through subtitles with instant Azerbaijani translations.
 
-Currently, two official plugins are available:
+Translation AI is a Chrome extension that helps you learn English naturally while watching videos on platforms like YouTube and Netflix.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Click any subtitle word to instantly see its Azerbaijani meaning, save useful vocabulary and sentences, and review them later with an interactive word bank and quizzes.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🎯 **Instant Word Translation**
+  - Click any subtitle word to see its Azerbaijani meaning.
+  - Get the word's part of speech and contextual explanation.
+  - See English and Azerbaijani example sentences.
 
-## Expanding the ESLint configuration
+- 📝 **Save Sentences**
+  - Save useful subtitle sentences for later.
+  - Automatically translate saved sentences into Azerbaijani.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 📚 **Word Bank**
+  - Save and review vocabulary.
+  - Search your saved words and sentences.
+  - Filter words by learning status.
+
+- 🧠 **AI Quiz**
+  - Generate quizzes from your saved vocabulary.
+  - Practice word meanings and contextual usage.
+  - Get Azerbaijani explanations for answers.
+
+- 🔥 **Learning Streak**
+  - Track your daily learning activity.
+  - Set a daily learning goal.
+  - Maintain your learning streak.
+
+- 🎬 **Subtitle-Based Learning**
+  - Learn English naturally while watching content.
+  - Designed for subtitle-based vocabulary learning.
+
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- CRXJS
+- Material UI
+- Chrome Extension Manifest V3
+- Google Gemini API
+- Cloudflare Workers
+- Chrome Storage API
+
+## 🏗️ Architecture
+
+```text
+YouTube / Netflix
+       │
+       ▼
+  Chrome Extension
+       │
+       ├── Content Script
+       │
+       ├── Background Service Worker
+       │
+       ▼
+ Cloudflare Worker
+       │
+       ▼
+   Gemini API
+       │
+       ▼
+Azerbaijani Translation
