@@ -132,7 +132,6 @@ export default function App() {
           py: { xs: 3, md: 5 },
         }}
       >
-        {/* HEADER */}
         <Stack
           direction={{ xs: "column", sm: "row" }}
           alignItems={{ xs: "flex-start", sm: "center" }}
@@ -191,19 +190,6 @@ export default function App() {
               "linear-gradient(135deg, rgba(124,92,255,0.16), rgba(79,70,229,0.04))",
           }}
         >
-          <Box
-            sx={{
-              position: "absolute",
-              width: 220,
-              height: 220,
-              borderRadius: "50%",
-              right: -90,
-              top: -100,
-              background: "rgba(124,92,255,0.13)",
-              filter: "blur(5px)",
-            }}
-          />
-
           <Stack
             direction={{ xs: "column", md: "row" }}
             alignItems={{ xs: "flex-start", md: "center" }}
@@ -215,7 +201,7 @@ export default function App() {
           >
             <Box>
               <Typography variant="h4" fontWeight={800} letterSpacing="-1px">
-                Keep learning. 🚀
+                Keep learning.
               </Typography>
 
               <Typography color="text.secondary" sx={{ mt: 1, maxWidth: 540 }}>
@@ -225,30 +211,31 @@ export default function App() {
             </Box>
 
             <Stack
-              direction="row"
               spacing={1}
-              alignItems="center"
               sx={{
                 px: 2,
-                py: 1.2,
                 borderRadius: 3,
+                display: "flex",
                 background: "rgba(255,255,255,0.05)",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              <LocalFireDepartment sx={{ color: "#ff9d42" }} />
+              <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
+                <LocalFireDepartment sx={{ color: "#ff9d42" }} />
 
-              <Box>
-                <Typography fontWeight={800}>{streak} day streak</Typography>
+                <Box>
+                  <Typography fontWeight={800}>{streak} day streak</Typography>
 
-                <Typography variant="caption" color="text.secondary">
-                  Keep it going!
-                </Typography>
+                  <Typography variant="caption" color="text.secondary">
+                    Keep it going!
+                  </Typography>
+                </Box>
               </Box>
             </Stack>
           </Stack>
         </Card>
 
-        {/* STATS */}
         <Stack
           direction={{ xs: "column", sm: "row" }}
           spacing={2}
