@@ -1,4 +1,3 @@
-// The proxy holds the API key. Never put the key in the extension.
 const PROXY_URL = "https://subtra-proxy.sublearn-ai.workers.dev";
 
 async function callAI(task, payload) {

@@ -6,7 +6,7 @@ import { bump, updateWord } from '../shared/storage';
 import Empty from './Empty';
 
 export default function Quiz({ words }) {
-  const [phase, setPhase] = useState('idle'); // idle | loading | play | done
+  const [phase, setPhase] = useState('idle'); 
   const [qs, setQs] = useState([]);
   const [i, setI] = useState(0);
   const [picked, setPicked] = useState(null);
