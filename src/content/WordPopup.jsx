@@ -61,7 +61,13 @@ export default function WordPopup({ state, onClose }) {
       }}
     >
       {/* Header */}
-      <Stack direction="row" alignItems="center" justifyContent="space-between">
+      <Stack
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
         <Typography
           sx={{
             fontSize: 23,
