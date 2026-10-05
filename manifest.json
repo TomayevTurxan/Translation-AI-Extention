@@ -5,10 +5,10 @@
   "description": "Click any subtitle word to see its Azerbaijani meaning and learn it later.",
 
   "icons": {
-    "16": "ai-tr.webp",
-    "32": "ai-tr.webp",
-    "48": "ai-tr.webp",
-    "128": "ai-tr.webp"
+    "16": "google-translate.jpg",
+    "32": "google-translate.jpg",
+    "48": "google-translate.jpg",
+    "128": "google-translate.jpg"
   },
 
   "permissions": ["storage"],
