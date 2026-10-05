@@ -3,27 +3,51 @@
   "name": "Translation AI",
   "version": "0.1.0",
   "description": "Click any subtitle word to see its Azerbaijani meaning and learn it later.",
+
+  "icons": {
+    "16": "ai-tr.webp",
+    "32": "ai-tr.webp",
+    "48": "ai-tr.webp",
+    "128": "ai-tr.webp"
+  },
+
   "permissions": ["storage"],
+
   "host_permissions": [
-  "https://www.youtube.com/*",
-  "https://www.netflix.com/*",
-  "https://subtra-proxy.sublearn-ai.workers.dev/*"
-],
-  "action": { "default_title": "Open Subtra dashboard" },
-  "background": { "service_worker": "src/background/index.js", "type": "module" },
+    "https://www.youtube.com/*",
+    "https://www.netflix.com/*",
+    "https://subtra-proxy.sublearn-ai.workers.dev/*"
+  ],
+
+  "action": {
+    "default_title": "Open Subtra dashboard"
+  },
+
+  "background": {
+    "service_worker": "src/background/index.js",
+    "type": "module"
+  },
+
   "content_scripts": [
-  {
-    "matches": [
-      "https://www.youtube.com/*",
-      "https://www.netflix.com/*"
-    ],
-    "js": ["src/content/index.jsx"]
-  }
-],
-  "options_ui": { "page": "src/dashboard/index.html", "open_in_tab": true },
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://www.netflix.com/*"
+      ],
+      "js": ["src/content/index.jsx"]
+    }
+  ],
+
+  "options_ui": {
+    "page": "src/dashboard/index.html",
+    "open_in_tab": true
+  },
+
   "commands": {
     "save-sentence": {
-      "suggested_key": { "default": "Alt+X" },
+      "suggested_key": {
+        "default": "Alt+X"
+      },
       "description": "Translate and save the current subtitle line"
     }
   }
