@@ -10,7 +10,7 @@
     "48": "google-translate.jpg",
     "128": "google-translate.jpg"
   },
-
+ 
   "permissions": ["storage"],
 
   "host_permissions": [
@@ -19,8 +19,12 @@
     "https://subtra-proxy.sublearn-ai.workers.dev/*"
   ],
 
-  "action": {
-    "default_title": "Open Subtra dashboard"
+ "action": {
+    "default_title": "Translation AI",
+    "default_icon": {
+      "16": "google-translate.jpg",
+      "32": "google-translate.jpg"
+    }
   },
 
   "background": {
